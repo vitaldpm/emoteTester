@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="Emote Tester" Height="500" Width="525" MinHeight="500" MinWidth="525" ResizeMode="NoResize" >
     <Grid Background="#0E0C13"  UseLayoutRounding="True"
-        RenderOptions.BitmapScalingMode="NearestNeighbor"
+        RenderOptions.BitmapScalingMode="Fant"
         SnapsToDevicePixels="True"
           RenderOptions.ClearTypeHint="Enabled"
           RenderOptions.EdgeMode="Aliased"
           
         >
-
+        <!-- Load Emote button -->
         <StackPanel>
             <WrapPanel Margin="25" HorizontalAlignment="Center" >
-                <Button Name="btnLoadFromFile" Padding="10 10" Foreground="White" Click="BtnLoadFromFile_Click" FontSize="16" BorderBrush="{x:Null}" FontFamily="Arial" FontWeight="Bold" Background="#FF332F40" >
+                <Button x:Name="btnLoadFromFile" Padding="10 10" Foreground="White" Click="BtnLoadFromFile_Click" FontSize="16" BorderBrush="{x:Null}" FontFamily="Arial" FontWeight="Bold" Background="#FF332F40" >
                     Load Emote...
                 </Button>
 
@@ -24,11 +24,11 @@
 
         </StackPanel>
 
-        
+        <!-- Start of Testing panels -->
         <StackPanel Margin="10 -100 10 10" Height="50" Orientation="Horizontal" Background="#0E0C13" VerticalAlignment="Center">
             <TextBlock Margin="10 10 0 10" Padding="2 10" VerticalAlignment="Center" TextWrapping="Wrap"  HorizontalAlignment="Left" FontFamily="Segoe UI">
-			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run Name="Name1" Text="username"/>:</Span>
-            <Span Foreground="White" FontFamily="Arial" FontSize="12"><Run Name="Text1" Text="Testing some icons"/></Span>
+			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run x:Name="Name1" Text="username"/>:</Span>
+            <Span Foreground="White" FontFamily="Arial" FontSize="12"><Run x:Name="Text1" Text="Testing some icons"/></Span>
             </TextBlock>
             <Image x:Name="imgDynamic" Stretch="Uniform" Width="28" Height="28"/>
             
@@ -36,34 +36,35 @@
         </StackPanel>
         <StackPanel Margin="10 0 10 10" Height="50" Orientation="Horizontal" Background="#201C2B" VerticalAlignment="Center">
             <TextBlock Margin="10 10 0 10" Padding="2 10 " VerticalAlignment="Center" TextWrapping="Wrap"  HorizontalAlignment="Left" FontFamily="Segoe UI">
-			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run Name="Name2" Text="username"/>:</Span>
-            <Span Foreground="White" FontFamily="Arial" FontSize="12"><Run Name="Text2" Text="Testing some icons"/></Span>
+			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run x:Name="Name2" Text="username"/>:</Span>
+            <Span Foreground="White" FontFamily="Arial" FontSize="12"><Run x:Name="Text2" Text="Testing some icons"/></Span>
             </TextBlock>
             <Image x:Name="imgDynamic2" Stretch="Uniform" Width="28" Height="28"/>
 
         </StackPanel>
         <StackPanel Margin="10 100 10 10" Height="50" Orientation="Horizontal" Background="#FAF9FA" VerticalAlignment="Center">
             <TextBlock Margin="10 10 0 10" Padding="2 10" VerticalAlignment="Center" TextWrapping="Wrap"  HorizontalAlignment="Left" FontFamily="Segoe UI">
-			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run Name="Name3" Text="username"/>:</Span>
-            <Span Foreground="Black" FontFamily="Arial" FontSize="12"><Run Name="Text3" Text="Testing some icons"/></Span>
+			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run x:Name="Name3" Text="username"/>:</Span>
+            <Span Foreground="Black" FontFamily="Arial" FontSize="12"><Run x:Name="Text3" Text="Testing some icons"/></Span>
             </TextBlock>
             <Image x:Name="imgDynamic3" Stretch="Uniform" Width="28" Height="28"/>
 
         </StackPanel>
         <StackPanel Margin="10 200 10 10" Height="50" Orientation="Horizontal" Background="#EFEEF1" VerticalAlignment="Center">
             <TextBlock Margin="10 10 0 10" Padding="2 10" VerticalAlignment="Center" TextWrapping="Wrap"  HorizontalAlignment="Left" FontFamily="Segoe UI">
-			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run Name="Name4" Text="username"/>:</Span>
+			<Span FontWeight="Bold"  FontFamily="Arial" Foreground="#2FB569" FontSize="12"><Run x:Name="Name4" Text="username"/>:</Span>
             <Span Foreground="Black" FontFamily="Arial" FontSize="12"><Run Name="Text4" Text="Testing some icons"/></Span>
             </TextBlock>
             <Image x:Name="imgDynamic4" Stretch="Uniform" Width="28" Height="28"/>
-
         </StackPanel>
+        <!-- End of Testing panels -->
+        <!-- Update Name and Text -->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 50">
-            <TextBox x:Name="nameUpdate" VerticalAlignment="Center" MinWidth="200" MaxWidth="200"  Margin="10" Padding="8" FontFamily="Arial" BorderBrush="#FF9783CB" Background="#FF332F40" Foreground="White" FontSize="14"/>
+            <TextBox x:Name="nameUpdate" VerticalAlignment="Center" Width="200"  Margin="10" Padding="8" FontFamily="Arial" BorderBrush="#FF9783CB" Background="#FF332F40" Foreground="White" FontSize="14"/>
             <Button Margin="10" Padding="10" FontSize="14" Click="BtnUpdate_Click" BorderBrush="{x:Null}" FontFamily="Arial" FontWeight="Bold" Background="#FF332F40" Foreground="White">Update Name</Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 0">
-            <TextBox x:Name="textUpdate" VerticalAlignment="Center" MinWidth="200" MaxWidth="200"  Margin="10" Padding="8" FontFamily="Arial" BorderBrush="#FF9783CB" Background="#FF332F40" Foreground="White" FontSize="14"/>
+            <TextBox x:Name="textUpdate" VerticalAlignment="Center" Width="200"  Margin="10" Padding="8" FontFamily="Arial" BorderBrush="#FF9783CB" Background="#FF332F40" Foreground="White" FontSize="14"/>
             <Button Margin="10" Padding="15 10" FontSize="14" Click="BtnTextUpdate_Click" BorderBrush="{x:Null}" FontFamily="Arial" FontWeight="Bold" Background="#FF332F40" Foreground="White">Update Text</Button>
         </StackPanel>
 

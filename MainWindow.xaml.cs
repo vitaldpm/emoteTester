@@ -29,6 +29,7 @@ namespace emoteTester
 
         }
 
+        //loading the image
         private void BtnLoadFromFile_Click(object sender, RoutedEventArgs e)
         {
 
@@ -45,15 +46,26 @@ namespace emoteTester
 
         }
 
+        //updating Usernames
         private void BtnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            Name1.Text = nameUpdate.Text;
-            Name2.Text = nameUpdate.Text;
-            Name3.Text = nameUpdate.Text;
-            Name4.Text = nameUpdate.Text;
+            if (nameUpdate.Text == "")
+            {
+                MessageBox.Show("Name cannot be empty");
+            }
+            else 
+            {
+                Name1.Text = nameUpdate.Text;
+                Name2.Text = nameUpdate.Text;
+                Name3.Text = nameUpdate.Text;
+                Name4.Text = nameUpdate.Text;
+                
+            }
             nameUpdate.Text = "";
 
         }
+
+        //updating Chat Text
         private void BtnTextUpdate_Click(object sender, RoutedEventArgs e)
         {
             Text1.Text = textUpdate.Text;

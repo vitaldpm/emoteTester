@@ -8,7 +8,6 @@
     <ApplicationIcon />
     <Win32Resource />
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>vitaldpm.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
 </Project>
